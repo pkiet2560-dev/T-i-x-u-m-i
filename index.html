@@ -1,0 +1,29 @@
+<div id="game-container">
+    <!-- Hiển thị Credits -->
+    <div class="user-info">
+        <img id="user-avatar" src="default-avatar.png" alt="Avatar">
+        <span id="balance-display">Credits: 0</span>
+    </div>
+
+    <!-- Khu vực bàn cược -->
+    <div class="betting-table">
+        <div class="bet-side" onclick="placeBet('Tai')">TÀI</div>
+        <div class="dice-area" id="dice-result">??</div>
+        <div class="bet-side" onclick="placeBet('Xiu')">XỈU</div>
+    </div>
+
+    <!-- Menu điều khiển -->
+    <div class="controls">
+        <button onclick="toggleMenu()">Menu/Cài đặt</button>
+        <input type="text" id="gift-code" placeholder="Nhập mã code...">
+        <button onclick="claimCode()">Nhận</button>
+    </div>
+
+    <!-- Modal Cài đặt -->
+    <div id="settings-menu" style="display:none;">
+        <h3>Cài đặt</h3>
+        <label>Hình nền URL: <input type="text" id="bg-url" onchange="updateAssets()"></label>
+        <label>Âm lượng: <input type="range" id="vol-control" onchange="updateAssets()"></label>
+        <button onclick="toggleMenu()">Đóng</button>
+    </div>
+</div>
